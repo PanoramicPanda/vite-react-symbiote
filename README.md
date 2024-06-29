@@ -13,32 +13,32 @@ Ensure you have Node.js and npm installed on your machine. If not, download and 
 
 This project was set up using the command:
 
-\`\`\`sh
+```sh
 npm create vite@latest . --template react
-\`\`\`
+```
 
 If you're picking up this project, follow these steps to get started:
 
 1. **Clone the Repository:**
 
-   \`\`\`sh
+   ```sh
    git clone https://github.com/PanoramicPanda/vite-react-symbiote.git
    cd vite-react-symbiote
-   \`\`\`
+   ```
 
 2. **Install Dependencies:**
 
-   \`\`\`sh
+   ```sh
    npm install
-   \`\`\`
+   ```
 
 ### Development
 
 To start the development server:
 
-\`\`\`sh
+```sh
 npm run dev
-\`\`\`
+```
 
 The development environment is configured to match the Symbiote's width (599px) for accurate styling and layout.
 
@@ -46,11 +46,11 @@ The development environment is configured to match the Symbiote's width (599px) 
 
 To build the project for production:
 
-\`\`\`sh
+```sh
 npm run build
-\`\`\`
+```
 
-This will create a \`dist\` folder containing the production build of your Symbiote.
+This will create a `dist` folder containing the production build of your Symbiote.
 
 ### Deployment
 
@@ -58,19 +58,19 @@ Running the deploy_to_ts script will copy the build to the default locally insta
 
 1. **Update Symbiote Name:**
 
-   Ensure you update the \`symbioteName\` variable in the deploy_to_ts script to match your Symbiote's folder name.
+   Ensure you update the `symbioteName` variable in the deploy_to_ts script to match your Symbiote's folder name.
 
 2. **Run Deploy Script:**
 
-   \`\`\`sh
+   ```sh
    npm run deploy
-   \`\`\`
+   ```
 
 For more information on Symbiote installation paths, refer to the [Symbiote installation documentation](https://symbiote-docs.talespire.com/#installing).
 
 ### Manifest Configuration
 
-The \`manifest.json\` file located in the \`public\` folder includes basic configuration for your Symbiote, such as name, website, and authors.
+The `manifest.json` file located in the `public` folder includes basic configuration for your Symbiote, such as name, website, and authors.
 
 **Note:** This manifest does not include the TaleSpire API hooks. For detailed documentation on the manifest configuration, visit [Symbiote Manifest Documentation](https://symbiote-docs.talespire.com/manifest_doc_v1.html).
 
@@ -78,7 +78,7 @@ The \`manifest.json\` file located in the \`public\` folder includes basic confi
 
 - The project uses JavaScript (JS) instead of TypeScript (TS).
 - SVG files are not supported in Symbiotes; please use PNG files instead.
-- Update your project name in the \`package.json\` file.
+- Update your project name in the `package.json` file.
 
 ## Helpful Links
 
