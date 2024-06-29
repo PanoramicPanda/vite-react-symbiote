@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "name": "mySymbioteName",
+  "summary": "A freshly generated symbiote",
+  "descriptionFilePath": "/README.md",
+  "version": "0.0.1",
+  "license": "MIT",
+  "about": {
+    "website": "https://your-url-here.com",
+    "authors": ["Your Name Here"]
+  },
+  "kind": "webView",
+  "entryPoint": "/index.html"
+}
