@@ -79,14 +79,6 @@ The `manifest.json` file located in the `public` folder includes basic configura
 When working with functions that are intended to be listeners on subscriptions in your project, it's crucial to ensure these functions are not minified during the build process. This ensures that their names remain intact and can be correctly referenced.
 Steps to Prevent Minification
 
-### Install Terser
-
-   Since Vite v3, Terser has become an optional dependency. Make sure to install it in your project:
-
-   ```sh
-   npm install terser --save-dev
-   ```
-
 #### Update vite.config.js:
    
    Configure Vite to use Terser and specify the functions you want to keep non-minified. Add the following configuration to your vite.config.js:
