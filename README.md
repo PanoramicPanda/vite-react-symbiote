@@ -74,6 +74,40 @@ The `manifest.json` file located in the `public` folder includes basic configura
 
 **Note:** This manifest does not include the TaleSpire API hooks. For detailed documentation on the manifest configuration, visit [Symbiote Manifest Documentation](https://symbiote-docs.talespire.com/manifest_doc_v1.html).
 
+### Ensuring Listener Functions Are Not Minified
+
+When working with functions that are intended to be listeners on subscriptions in your project, it's crucial to ensure these functions are not minified during the build process. This ensures that their names remain intact and can be correctly referenced.
+Steps to Prevent Minification
+
+### Install Terser
+
+   Since Vite v3, Terser has become an optional dependency. Make sure to install it in your project:
+
+   ```sh
+   npm install terser --save-dev
+   ```
+
+#### Update vite.config.js:
+   
+   Configure Vite to use Terser and specify the functions you want to keep non-minified. Add the following configuration to your vite.config.js:
+
+```javascript
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+   plugins: [react()],
+   build: {
+      minify: 'terser',
+      terserOptions: {
+         keep_fnames: /oneFunctionNameToKeep|otherFunctionNamesToKeep/
+      }
+   }
+});
+```
+
+In the terserOptions, replace otherFunctionNamesToKeep with any other function names you want to keep non-minified.
+
 ### Notes
 
 - The project uses JavaScript (JS) instead of TypeScript (TS).
