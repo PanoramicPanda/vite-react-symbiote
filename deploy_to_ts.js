@@ -3,7 +3,8 @@ import path from 'path';
 import os from 'os';
 
 const buildDir = path.join(path.resolve(), 'dist');
-const symbioteName = 'my-symbiote-name'; // Set your specific directory name here
+const config = JSON.parse(await fs.promises.readFile('./build_folder_name.json', 'utf-8'));
+const symbioteName = config.buildFolder;
 
 let targetDir;
 

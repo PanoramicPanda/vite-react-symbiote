@@ -42,15 +42,21 @@ npm run dev
 
 The development environment is configured to match the Symbiote's width (599px) for accurate styling and layout.
 
-### Building for Production
+### Building for Mod.io
 
-To build the project for production:
+To build and zip the project for upload on Mod.io:
+
+1. **Update Symbiote Name:**
+
+   Ensure you update the `buildFolder` variable in the `build_folder_name.json` to match your Symbiote's folder name.
+
+2. **Run Build and Zip Script:**
 
 ```sh
-npm run build
+npm run build-and-zip
 ```
 
-This will create a `dist` folder containing the production build of your Symbiote.
+This will create a `mod-io-build` folder containing the production build of your Symbiote, along with zipping it up in an appropriately named zip for upload.
 
 ### Deployment
 
@@ -58,7 +64,7 @@ Running the deploy_to_ts script will copy the build to the default locally insta
 
 1. **Update Symbiote Name:**
 
-   Ensure you update the `symbioteName` variable in the deploy_to_ts script to match your Symbiote's folder name.
+   Ensure you update the `buildFolder` variable in the `build_folder_name.json` to match your Symbiote's folder name.
 
 2. **Run Deploy Script:**
 

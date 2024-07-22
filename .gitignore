@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# TaleSpire Symbiote Stuff
+mod-io-build
+*.zip
